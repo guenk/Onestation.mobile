@@ -48,6 +48,8 @@ const styles = StyleSheet.create({
   },
   titleText: {
     textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 20, 
     paddingTop: 20,
   },
   buttonContainer: {
