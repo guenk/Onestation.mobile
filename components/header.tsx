@@ -15,13 +15,16 @@ const Header: React.FC = () => {
     setMenuOpen(false);
   };
 
+  const handleHome = () => {
+    navigation.navigate("index");
+  };
+
   const handleLogin = () => {
-    // Logic for login
-    console.log("Login button clicked");
+    navigation.navigate("login");
   };
 
   const handleSignup = () => {
-    // Redirection vers la page Register
+
     navigation.navigate("register");
   };
 
@@ -29,11 +32,13 @@ const Header: React.FC = () => {
     <TouchableOpacity onPress={closeMenu}>
       <View style={styles.container}>
         <View style={styles.logoContainer}>
-          <Image
-            source={require("../assets/images/navbarpic2.png")}
-            style={styles.logo}
-            resizeMode="contain"
-          />
+          <TouchableOpacity onPress={handleHome}>
+            <Image
+              source={require("../assets/images/navbarpic2.png")}
+              style={styles.logo}
+              resizeMode="contain"
+            />
+          </TouchableOpacity>
         </View>
         <TouchableOpacity style={styles.menuButton} onPress={toggleMenu}>
           <Ionicons

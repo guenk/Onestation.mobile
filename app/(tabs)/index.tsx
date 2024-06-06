@@ -1,22 +1,20 @@
 import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
-import { ThemedText } from "@/components/ThemedText";
-import { ThemedView } from "@/components/ThemedView";
 import Header from "@/components/header";
 
 export default function HomeScreen() {
   return (
-    <ThemedView style={styles.container}>
+    <View style={styles.container}>
       <Header />
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title" style={styles.titleText}>
+      <View style={styles.titleContainer}>
+        <Text style={styles.titleText}>
           Bienvenue dans
-        </ThemedText>
-        <ThemedText type="title" style={styles.titleText}>
+        </Text>
+        <Text style={styles.titleText}>
           Guess My Draw!
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.buttonContainer}>
+        </Text>
+      </View>
+      <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={[styles.button, styles.greenButton]}
           onPress={() => {
@@ -33,8 +31,8 @@ export default function HomeScreen() {
         >
           <Text style={[styles.buttonText]}>Créer une room privée</Text>
         </TouchableOpacity>
-      </ThemedView>
-    </ThemedView>
+      </View>
+    </View>
   );
 }
 
