@@ -71,6 +71,8 @@ const styles = StyleSheet.create({
   logoContainer: {
     flex: 1,
     alignItems: "center",
+    marginTop: 50,
+    marginLeft: 40,
   },
   logo: {
     height: 150,
@@ -104,7 +106,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   menuText: {
-    fontFamily: "PermanentMarker-Regular",
     fontSize: 16,
   },
 });

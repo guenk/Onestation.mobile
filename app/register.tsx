@@ -82,14 +82,14 @@ export default function Register() {
 
   return (
     <View style={styles.mainregister}>
+      <Link style={styles.link} href="/">
+        <Image
+          source={require("../assets/images/navbarpic2.png")}
+          style={styles.logo}
+          resizeMode="contain"
+        />
+      </Link>
       <View style={styles.formContainer}>
-        <Link style={styles.link} href="/">
-          <Image
-            source={require("../assets/images/navbarpic2.png")}
-            style={styles.logo}
-            resizeMode="contain"
-          />
-        </Link>
         <Text style={styles.title}>Inscription</Text>
         <Text style={styles.label}>Pseudo:</Text>
         <TextInput
@@ -151,20 +151,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
   },
   formContainer: {
-    width: "80%",
+    width: "100%",
     padding: 20,
     borderRadius: 8,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
   },
   link: {
     alignSelf: "center",
+    marginBottom: 20,
+    height: 200,
   },
   logo: {
     width: 150,
@@ -201,13 +195,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   textContainer: {
-    flexDirection: "row",
-    justifyContent: "center",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 30,
   },
   text: {
     color: "#333",
+    marginBottom: 10,
   },
   linkText: {
     color: "blue",

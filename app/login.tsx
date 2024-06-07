@@ -79,8 +79,7 @@ export default function Login() {
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.formContainer}>
+      <View style={styles.container}>
         <Link style={styles.link} href="/">
           <Image
             source={require("../assets/images/navbarpic2.png")}
@@ -88,49 +87,50 @@ export default function Login() {
             resizeMode="contain"
           />
         </Link>
-        <Text style={styles.title}>Connexion</Text>
-        <Text style={styles.label}>Pseudo:</Text>
-        <TextInput
-          style={styles.input}
-          value={pseudo}
-          onChangeText={(text) => setPseudo(text)}
-          placeholder="Pseudo"
-          placeholderTextColor="#333"
-        />
-        {formError.pseudo && (
-          <Text style={styles.errorText}>{formError.pseudo}</Text>
-        )}
-        <Text style={styles.label}>Email:</Text>
-        <TextInput
-          style={styles.input}
-          value={email}
-          onChangeText={(text) => setEmail(text)}
-          placeholder="Email"
-          placeholderTextColor="#333"
-        />
-        <Text style={styles.label}>Mot de passe:</Text>
-        <TextInput
-          style={styles.input}
-          value={password}
-          onChangeText={(text) => setPassword(text)}
-          placeholder="Mot de passe"
-          placeholderTextColor="#333"
-          secureTextEntry={true}
-        />
-        {formError.password && (
-          <Text style={styles.errorText}>{formError.password}</Text>
-        )}
-        <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-          <Text style={styles.buttonText}>Se connecter</Text>
-        </TouchableOpacity>
-        <View style={styles.registerLink}>
-          <Text>Vous n'avez pas encore de compte?</Text>
-          <Link href="register">
-            <Text style={styles.registerText}>S'inscrire</Text>
-          </Link>
+        <View style={styles.formContainer}>
+          <Text style={styles.title}>Connexion</Text>
+          <Text style={styles.label}>Pseudo:</Text>
+          <TextInput
+            style={styles.input}
+            value={pseudo}
+            onChangeText={(text) => setPseudo(text)}
+            placeholder="Pseudo"
+            placeholderTextColor="#333"
+          />
+          {formError.pseudo && (
+            <Text style={styles.errorText}>{formError.pseudo}</Text>
+          )}
+          <Text style={styles.label}>Email:</Text>
+          <TextInput
+            style={styles.input}
+            value={email}
+            onChangeText={(text) => setEmail(text)}
+            placeholder="Email"
+            placeholderTextColor="#333"
+          />
+          <Text style={styles.label}>Mot de passe:</Text>
+          <TextInput
+            style={styles.input}
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+            placeholder="Mot de passe"
+            placeholderTextColor="#333"
+            secureTextEntry={true}
+          />
+          {formError.password && (
+            <Text style={styles.errorText}>{formError.password}</Text>
+          )}
+          <TouchableOpacity style={styles.button} onPress={handleSubmit}>
+            <Text style={styles.buttonText}>Se connecter</Text>
+          </TouchableOpacity>
+          <View style={styles.registerLink}>
+            <Text>Vous n'avez pas encore de compte?</Text>
+            <Link href="register">
+              <Text style={styles.registerText}>S'inscrire</Text>
+            </Link>
+          </View>
         </View>
       </View>
-    </View>
   );
 }
 
@@ -142,20 +142,14 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
   },
   formContainer: {
-    width: "80%",
+    width: "100%",
     padding: 20,
     borderRadius: 8,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
   },
   link: {
     alignSelf: "center",
+    marginBottom: 20,
+    height: 200,
   },
   logo: {
     width: 150,
@@ -197,13 +191,12 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   registerLink: {
-    flexDirection: "row",
-    justifyContent: "center",
     alignItems: "center",
     marginTop: 20,
   },
   registerText: {
     color: "blue",
     marginLeft: 5,
+    fontWeight: "bold",
   },
 });
