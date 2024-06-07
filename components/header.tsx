@@ -3,7 +3,7 @@ import { View, Image, TouchableOpacity, Text, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const Header: React.FC = () => {
+export default function Header({ roomID, setRoom }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigation = useNavigation();
 
@@ -109,5 +109,3 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
-
-export default Header;
