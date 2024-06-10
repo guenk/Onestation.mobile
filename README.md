@@ -32,7 +32,7 @@ Onestation.mobile est une application mobile Pictionary en ligne construite avec
 ### Cloner le dépôt
 
 ```bash
-git clone https://github.com/votre-utilisateur/onestation.mobile.git
+git clone https://github.com/guenk/onestation.mobile.git
 cd onestation.mobile
 ```
 
